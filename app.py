@@ -2,6 +2,8 @@ from dotenv import load_dotenv
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
 
 def main():
     load_dotenv()
@@ -27,7 +29,16 @@ def main():
         )
         chunks = text_splitter.split_text(text)
 
-        st.write(chunks[:5])
+        # create embeddings
+        embeddings = OpenAIEmbeddings()
+        knowledge_base = FAISS.from_texts(chunks, embeddings)
+
+        # show user input
+        user_question = st.text_input("Ask a question about your PDF: ")
+        if user_question: 
+            docs = knowledge_base.similarity_search(user_question)
+            st.write(docs)
+
 
 if __name__ == '__main__':
     main()
