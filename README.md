@@ -1,5 +1,7 @@
 # AskPDF
+AskPDF is one of the many applications of LLM use-cases. It allows extensive interactions with PDF files by answering the questions that users input about the uploaded PDF file.
 
+Aside from basic prompting and LLMs, text-splitting and retrieval are essential components of AskPDF. Since PDFs usually contain long paragraphs, the text splitter allows AskPDF to process small chunks of paragraphs for analysis, while retrieval provides AskPDF with answers based on the provided PDF. 
 
 # Getting Started
 
