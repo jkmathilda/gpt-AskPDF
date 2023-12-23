@@ -3,6 +3,8 @@ AskPDF is one of the many applications of LLM use-cases. It allows extensive int
 
 Aside from basic prompting and LLMs, text-splitting and retrieval are essential components of AskPDF. Since PDFs usually contain long paragraphs, the text splitter allows AskPDF to process small chunks of paragraphs for analysis, while retrieval provides AskPDF with answers based on the provided PDF. 
 
+![Image 2023-12-22 at 11 06 PM](https://github.com/jkmathilda/ChatGPT-Chatbot/assets/142202145/25da1fef-1ed8-40a8-a80b-de50aaf1c648)
+
 # Getting Started
 
 To get started with this project, you'll need to clone the repository and set up a virtual environment. This will allow you to install the required dependencies without affecting your system-wide Python installation.
