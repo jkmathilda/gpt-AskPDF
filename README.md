@@ -40,7 +40,7 @@ To configure the application, there are a few properties that can be set the env
 
 ### Running the Application
 
-    python -m streamlit run main.py
+    python -m streamlit run app.py
 
 ### Deactivate the virtual environment
 
@@ -48,8 +48,5 @@ To configure the application, there are a few properties that can be set the env
 
 ### Reference
 
-Chatbots (on LangChain)
-[https://python.langchain.com/docs/use_cases/chatbots]
-
-Youtube : Create a ChatGPT clone using Streamlit and LangChain
-[https://www.youtube.com/watch?v=IaTiyQ2oYUQ]
+Youtube : Create a ChatGPT For Your PDF in Python
+[https://www.youtube.com/watch?v=wUAUdEw5oxM]
