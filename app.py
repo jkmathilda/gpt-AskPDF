@@ -50,7 +50,7 @@ def main():
                                                                             # . Map Re-rank : The map re-rank documents chain runs an initial prompt on each document, that not only tries to complete a task but also gives a score for how certain it is in its answer
             with get_openai_callback() as cb:                               # Use a context manager for handling callbacks
                 response = chain.run(input_documents=docs, question=user_question)  # Run the chain to get a response for the user's question
-                print(cb)
+                # print(cb)
 
             st.write(response)
 
