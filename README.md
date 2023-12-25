@@ -50,6 +50,10 @@ To configure the application, there are a few properties that can be set the env
 
     deactivate
 
+### Example
+
+<img width="1710" alt="Screenshot 2023-12-24 at 5 58 21 PM" src="https://github.com/jkmathilda/AskPDF/assets/142202145/71966668-e2fd-40dd-94cf-c6aa407cda4c">
+
 ### Reference
 
 Youtube : Create a ChatGPT For Your PDF in Python
