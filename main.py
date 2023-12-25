@@ -79,9 +79,8 @@ def process_split_embeding_vectorize(pdf_text, vectorStore_space, option_text_sp
         
         if os.path.exists(vectorStore_space):
             VectorStore = FAISS.load_local(vectorStore_space, embeddings=embeddings)
-            st.write(":blue[Embeddings loaded from the your folder already (disks)]")
+            st.write(":blue[Embeddings loaded from your file already (disks)]")
         else:
-            embeddings = OpenAIEmbeddings()
             VectorStore = FAISS.from_texts(chunks, embedding=embeddings)
             VectorStore.save_local(vectorStore_space)
             st.write(":orange[Embedding computation completed]")
@@ -95,9 +94,8 @@ def process_split_embeding_vectorize(pdf_text, vectorStore_space, option_text_sp
         
         if os.path.exists(vectorStore_space):
             VectorStore = Chroma(persist_directory=vectorStore_space, embedding_function=embeddings)
-            st.write(":blue[Embeddings loaded from the your folder already (disks)]")
+            st.write(":blue[Embeddings loaded from your file already (disks)]")
         else:
-            embeddings = OpenAIEmbeddings()
             VectorStore = Chroma.from_texts(texts=chunks, embedding=embeddings, persist_directory=vectorStore_space)
             VectorStore.persist()
             st.write(":orange[Embedding computation completed]")
