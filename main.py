@@ -55,7 +55,7 @@ def text_split_by_RecursiveCharacterTextSplitter():
         separators=["\n", ".", " "] # Defaults to ["\n\n", "\n", " ", ""]
     )
 
-def process_split_embeding_vectorize(pdf_text, vectorStore_space, option_text_splitter, option_vector_store):
+def process_split_embedding_vectorize(pdf_text, vectorStore_space, option_text_splitter, option_vector_store):
     # Split text into manageable chunks
     if option_text_splitter == "CharacterTextSplitter":
         text_splitter = text_split_by_CharacterTextSplitter()
@@ -133,7 +133,7 @@ def main():
 
         # Create the knowledge base(VectorStore) object
         vectorStore_space = pdf.name[:-4]
-        VectorStore = process_split_embeding_vectorize(pdf_text, vectorStore_space, option_text_splitter, option_vector_store)
+        VectorStore = process_split_embedding_vectorize(pdf_text, vectorStore_space, option_text_splitter, option_vector_store)
         
         # User input for querying the PDF
         user_question = st.text_input("Ask a question about your PDF: ")    # Create an input field for the user to ask a question
