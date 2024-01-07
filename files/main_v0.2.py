@@ -1,12 +1,12 @@
 from dotenv import load_dotenv
-from langchain_community.llms import OpenAI
+from langchain.llms import OpenAI
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain_community.vectorstores import FAISS
-from langchain_community.vectorstores import Chroma
+from langchain.vectorstores import FAISS
+from langchain.vectorstores import Chroma
 from langchain.chains.question_answering import load_qa_chain
-from langchain_community.callbacks import get_openai_callback
+from langchain.callbacks import get_openai_callback
 import streamlit as st
 import os
 import pickle
@@ -105,12 +105,7 @@ def process_split_embedding_vectorize(pdf_text, vectorStore_space, option_text_s
 
     return VectorStore
 
-def main():
-    # Load environment variables from a .env file, useful for hiding sensitive information
-    if not load_dotenv():
-        print("Could not load .env file or it is empty. Please check if it exists and is readable.")
-        exit(1)     # The call exit(0) indicates successful execution of a program whereas exit(1) indicates some issue/error occurred while executing a program. 
-    
+def main():    
     st.set_page_config(                 # Define Streamlit page configuration.
         page_title="Ask your PDF",      # Title of the page.
         page_icon="⌨️"                   # Icon of the page.
@@ -132,6 +127,9 @@ def main():
         pdf_text = ""                           # Initialize a string to accumulate extracted text
         for page in pdf_reader.pages:       # Loop through each page in the PDF
             pdf_text += page.extract_text()     # Append the extracted text from each page to the 'text' variable
+
+        # Load environment variables from a .env file, useful for hiding sensitive information
+        load_dotenv()
 
         # Create the knowledge base(VectorStore) object
         vectorStore_space = pdf.name[:-4]

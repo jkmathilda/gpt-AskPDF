@@ -11,11 +11,11 @@ To get started with this project, you'll need to clone the repository and set up
 
 ### Cloning the Repository
 
-    git clone https://github.com/jkmathilda/AskPDF.git
+    git clone https://github.com/jkmathilda/gpt-AskPDF.git
 
 ### Setting up a Virtual Environment
 
-    cd ./AskPDF
+    cd ./gpt-AskPDF
 
     pyenv versions
 
@@ -34,7 +34,11 @@ To get started with this project, you'll need to clone the repository and set up
 
 ### Install the required dependencies
 
+    pip list
+
     pip install -r requirements.txt
+
+    pip freeze | tee requirements.txt.detail
 
 ### Configure the Application
 
