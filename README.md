@@ -58,7 +58,6 @@ To configure the application, there are a few properties that can be set the env
 
 <img width="1710" alt="Screenshot 2023-12-24 at 5 58 21 PM" src="https://github.com/jkmathilda/AskPDF/assets/142202145/71966668-e2fd-40dd-94cf-c6aa407cda4c">
 
-### Reference
+# Reference
 
-Youtube : Create a ChatGPT For Your PDF in Python
-[https://www.youtube.com/watch?v=wUAUdEw5oxM]
+[Create a ChatGPT For Your PDF in Python](https://www.youtube.com/watch?v=wUAUdEw5oxM)
